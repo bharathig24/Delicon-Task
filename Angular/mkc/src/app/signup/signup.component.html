@@ -1,0 +1,50 @@
+<div class="signin-main-div">
+    <div class="signin-div">
+        <!-- <div class="signin-div"> -->
+        <!-- sign in -->
+        <div class="signin-left">
+            <div class="signin-left-inner">
+                <h2 class="signin-h2">Welcome Back</h2>
+                <div class="signin-p-div">
+                    <p>To keep connected with us please login with your personal info</p>
+                </div>
+                <div class="signin-btn-div">
+                    <button class="signin-btn" routerLink="/login">SIGN IN</button>
+                    <!-- <button class="signin-btn" (click)="check()">SIGN IN</button> -->
+                </div>
+            </div>
+        </div>
+        <!-- sign up -->
+        <div class="signin-right">
+            <div class="signin-right-inner">
+                <h2 class="signup-h2">Create Account</h2>
+                <div class="signup-option-div">
+                    <div class="icon-div">
+                        <fa-icon [icon]="faFacebookF" size="sm"></fa-icon>
+                    </div>
+                    <div class="icon-div">
+                        <fa-icon [icon]="faGooglePlusG" size="sm"></fa-icon>
+                    </div>
+                </div>
+                <p class="signup-p">or use your email for registration</p>
+                <form class="signup-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="signup-form-input-div">
+                        <fa-icon [icon]="faUser" size="sm"></fa-icon>
+                        <input class="signup-form-input" type="text" placeholder="User" formControlName="userName">
+                    </div>
+                    <div class="signup-form-input-div">
+                        <fa-icon [icon]="faEnvelope" size="sm"></fa-icon>
+                        <input class="signup-form-input" type="text" placeholder="Email" formControlName="eMail">
+                    </div>
+                    <div class="signup-form-input-div">
+                        <fa-icon [icon]="faLock" size="sm"></fa-icon>
+                        <input class="signup-form-input" type="password" placeholder="Password" formControlName="password">
+                    </div>
+                    <!-- <a class="signin-form-a" href="#">forgot your password?</a> -->
+                    <button type="submit" class="signup-form-btn">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="user">
+    <div class="uname">
+        <p>{{user}}</p>
+    </div>
+
+    <div class="logout">
+        <button type="button" routerLink="/login">Logout</button>
+    </div>
+
+</div>
+<div class="top-nav">
+    <div class="top-nav-bar a"><button routerLink="/reservation">Reservation</button></div>
+    <div class="top-nav-bar b"><button routerLink="/read">Read</button></div>
+    <div class="top-nav-bar c"><button routerLink="/edit">Edit</button></div>
+    <div class="top-nav-bar d"><button routerLink="/delete">Delete</button></div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

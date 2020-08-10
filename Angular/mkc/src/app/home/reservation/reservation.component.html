@@ -1,0 +1,60 @@
+<div class="reserve">
+    <div class="form-out-div">
+        <form class="form" [formGroup]="reserveForm" (ngSubmit)="book()">
+            <p>Please select your booking details</p>
+            <div class="form-row1-div">
+
+                <div class="date">
+                    <div>Select Date</div>
+                    <input type="date" formControlName="date">
+                </div>
+                <div class="guest">
+                    <div>Select Guest</div>
+                    <select name="guest" formControlName="guest">
+                        <!-- <option selected="selected" disabled>Select Guest</option> -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div class="time">
+                    <div>Select Time</div>
+                    <select name="time" formControlName="time">
+                        <option value="10 am">10 am</option>
+                        <option value="12 pm">12 pm</option>
+                        <option value="2 pm">2 pm</option>
+                        <option value="4 pm">4 pm</option>
+                        <option value="6 pm">6 pm</option>
+                        <option value="8 pm">8 pm</option>
+                    </select>
+                </div>
+            </div>
+            <p>Enter guest details</p>
+            <div class="form-row2-div">
+                <div class="form-row2-div1">
+                    <div class="fName">
+                        <input type="text" placeholder="First name" formControlName="fName">
+                    </div>
+                    <div class="lName">
+                        <input type="text" placeholder="Last name" formControlName="lName">
+                    </div>
+                </div>
+                <div class="form-row2-div2">
+                    <div class="email">
+                        <input type="email" placeholder="Email" formControlName="eMail">
+                    </div>
+                    <div class="number">
+                        <input type="number" placeholder="Mobile number" formControlName="mobile">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-div">
+                <button class="btn" type="submit">Book</button>
+            </div>
+        </form>
+        <div class="confirm" [ngStyle]="{'display' : value}">Reservation success</div>
+    </div>
+</div>
